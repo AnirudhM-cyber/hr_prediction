@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hr_prediction</title>
+</head>
+
+<body>
+
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2><b>Predictive analysis</b></h2>
+            <h3><b>Gender</b></h3>
+            <ul>
+                <li>Type <b>1</b> for Male</li>
+                <li>Type <b>0</b> for Female</li>
+            </ul>
+        
+            <input id="first" name="gender" type="number">
+            <h3><b>Relavent_Experience</b></h3><br><input id="second" name="relavent_experience" required="required">
+            <h3><b>Education_Level</b></h3><input id="third" name="education_level" required="required">
+            <h3><b>Experience</b></h3><br><input id="fourth" name="experience" required="required">
+            
+            
+            <br><br><button id="sub" type="submit "><b>The Result are</b></button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color:whitesmoke;
+            text-align:left;
+            padding: 2px;
+            font-style:normal;
+            background-image: url(1.png);
+        }
+
+        
+        /*#research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }*/
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #gender {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        
+        #Relavent_experience {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        
+        
+        #Relavent_experience:hover {
+            background-color: coral;
+        }
+        
+        #Education_level {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #Education_level:hover {
+            background-color: coral;
+        }
+        
+        #Experience {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #Exeprience:hover {
+            background-color:yellow;
+        }
+        
+        /*#first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }*/
+
+        #sub:hover{
+            background-color:red;
+        }
+    </style>
+</body>
+
+</html>
